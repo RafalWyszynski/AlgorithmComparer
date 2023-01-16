@@ -1,31 +1,27 @@
 import random
 
-def QuickSort(arr, left, right):
-    if left < right:
-        x = random.randint(left,right)
-        print(x)
-        i = left
-        j = right
-        while 1>0:
-            while arr[i] < arr[x] and i<len(arr):
-                i = i+1
-            while arr[j] >= arr[x] and j>=0:
-                j = j-1
-            if i <= j:
-                arr[i],arr[j] = arr[j],arr[i]
-            else:
+def quickSort(arr, left, right):
+    if(left >= right):
+        return
+    pivot = arr[(left + right) // 2]  
+    i = left - 1
+    j = right + 1
+    while(1):
+        while(1):             
+            i += 1
+            if(arr[i] >= pivot):
                 break
-        print(arr)              
-        if i < right:
-            QuickSort(arr, i, right)
-        if j > left:
-            QuickSort(arr, left, j)
+        while(1):           
+            j -= 1
+            if(arr[j] <= pivot):
+                break
+        if(i >= j):
+            break
+        arr[i],arr[j] = arr[j],arr[i]
+    quickSort(arr, left, j)
+    quickSort(arr, j+1, right)
 
 
-    
-
-
-    
 array = []
 print("Ile danych chcesz wprowadzić?")
 x = int(input())
@@ -34,4 +30,5 @@ for i in range (0,x):
     c = int(input())
     array.append(c)    
 print(array)
-print(QuickSort(array, 0, len(array)-1))
+quickSort(array, 0, len(array)-1)
+print(array)
