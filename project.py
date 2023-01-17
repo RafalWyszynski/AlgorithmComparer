@@ -115,11 +115,11 @@ def Start():
                 print("[BŁĄD] Wprowadź cyfrę!")
     elif option1 == "2":    #Plik 
         print("\nCzy chcesz edytować plik czy stworzyć nowy?")
-        option3 = input('[1] Stwórz plik. \n[2] Edytuj istniejący plik.\n')
+        option3 = input('[1] Stwórz plik. \n[2] Wczytaj istniejący plik.\n')
 
         while option3 != "1" and option3 != "2":
             print("[BŁĄD] Wprowadź prawidłową wartość!\n")
-            option3 = input('[1] Stwórz plik. \n[2] Edytuj istniejący plik.\n') 
+            option3 = input('[1] Stwórz plik. \n[2] Wczytaj istniejący plik.\n') 
 
         if option3=="2":
             print("Podaj nazwę pliku (plik musi znajdować się w folderze) w formacie nazwa.txt: ")
