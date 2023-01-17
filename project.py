@@ -144,7 +144,7 @@ def Start():
             while True:
                 try:
                     path = str(input())            
-                    file = open(path,'a')
+                    file = open(path,'w')
                     break
                 except:
                     print("[BŁĄD] Nieprawidłowo wpisano nazwę pliku!")
