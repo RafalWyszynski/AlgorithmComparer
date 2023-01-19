@@ -101,6 +101,8 @@ def Start():
         while True:
             try:
                 dateCount = int(input())
+                if dateCount <= 0:
+                    somethink = int("Hey")
                 break
             except:
                 print("\n[BŁĄD] Wprowadzono złą wartość. Spróbuj ponownie:")    #Klawiatura
